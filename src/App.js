@@ -5,7 +5,6 @@ import {Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About' 
 import Services from './pages/Services' 
-import Forms from './pages/Forms' 
 import Department from './pages/Department' 
 import Salary from './pages/Salary' 
 import Position from './pages/Position' 
@@ -16,6 +15,8 @@ import Addsalary from './pages/Addsalary';
 import Updatesalary from './pages/Updatesalary';
 import Addposition from './pages/Addposition';
 import Updateposition from './pages/Updateposition';
+import Login from './pages/Login ';
+import SignUp from './pages/SignUp';
 
 
 
@@ -29,7 +30,8 @@ function App() {
         <Route path='/' element={<Home/>}  />
         <Route path='/about' element={<About/>}  />
         <Route path='/services' element={<Services/>}  />
-        <Route path='/forms' element={<Forms/>}  />
+        <Route path='/login' element={<Login/>}  />
+        <Route path='/SignUp' element={<SignUp/>}  />
         <Route path='/department' element={<Department/>}  />
         <Route path='/salary' element={<Salary/>}  />
         <Route path='/position' element={<Position/>}  />
