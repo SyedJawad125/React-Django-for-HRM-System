@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate  } from 'react-router-dom'
 
 const Login  = () => {
+    const navigate = useNavigate()
+
+    const updateRecord = async () => {
+        navigate('/SignUp' )
+    }
+
   return (
     <div class="container" style={{ marginLeft: '200px' }}>
     <div class="row justify-content-center">
@@ -25,11 +32,11 @@ const Login  = () => {
                             <label class="form-check-label" for="rememberMe">Remember me</label>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Login</button>
-                        <button type="submit" class="btn btn-danger w-20 mt-4 ml-20 " >SignUp</button>
+                        <button type="submit" class="btn btn-danger w-20 mt-4 ml-20"onClick={()=> updateRecord()} >SignUp</button>
                     </form>
                 </div>
                 <div class="card-footer text-center">
-                    <small>&copy; 2024 Your Company</small>
+                    <small>&copy; 2024 JS Motors</small>
                 </div>
             </div>
         </div>
