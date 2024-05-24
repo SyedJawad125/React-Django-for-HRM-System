@@ -16,7 +16,7 @@ const Login  = () => {
                 <div class="card-header">
                     <h3 class="text-center">Login</h3>
                 </div>
-                <div class="card-body">
+                <div class="card-body" >
                     <form>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
@@ -36,7 +36,7 @@ const Login  = () => {
                     </form>
                 </div>
                 <div class="card-footer text-center">
-                    <small>&copy; 2024 JS Motors</small>
+                    <small>&copy; 2024 HRMS</small>
                 </div>
             </div>
         </div>
