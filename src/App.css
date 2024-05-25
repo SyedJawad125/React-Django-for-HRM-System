@@ -193,3 +193,46 @@ body {
   margin-left: 200px; /* Same as the width of the sidenav */
   padding: 0px 20px;
 }
+
+/* SignUp button CSS */
+.call-to-action {
+  display: flex;
+  justify-content : flex-end;
+}
+
+.right-button {
+  padding: 8px 20px;
+  background-color: #e20b24;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.right-button:hover {
+  background-color: #ab0b0b; /* Optional: Adds a hover effect */
+}
+
+ /* Card footer */
+.card-footer {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+  /* Button styles */
+  .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .card-content {
+    flex: 1;
+    
+  }
