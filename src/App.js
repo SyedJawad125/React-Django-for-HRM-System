@@ -17,6 +17,7 @@ import Addposition from './pages/Addposition';
 import Updateposition from './pages/Updateposition';
 import Login from './pages/Login ';
 import SignUp from './pages/SignUp';
+// import Footer from './components/Footer';
 
 
 
@@ -25,7 +26,6 @@ function App() {
     <div>
 
       <Navbar/>
-
       <Routes>
         <Route path='/' element={<Home/>}  />
         <Route path='/about' element={<About/>}  />
@@ -42,9 +42,8 @@ function App() {
         <Route path='/update/Updatesalary' element={<Updatesalary/>}  />
         <Route path='add/Addposition' element={<Addposition/>}  />
         <Route path='update/Updateposition' element={<Updateposition/>}  />
-
-
       </Routes>
+      {/* <Footer/> */}
     </div>
 
   )

@@ -7,11 +7,11 @@ const SignUp = () => {
     <div class="container" style={{ marginLeft: '200px' }}>
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0 " >
-          <h1 class="my-5 display-3 fw-bold ls-tight">
+          <h3 class="my-7 display-5 fw-bold ls-tight" style={{ margin: '40px' }}>
             The HRM System <br />
             <span class="text-primary">offer Best Performance </span>
-          </h1>
-          <p style={{color: "hsl(217, 10%, 50.8%)"}} >
+          </h3>
+          <p style={{ margin: '50px' }}>
           A Human Resource Management System (HRMS) is a comprehensive software 
           suite designed to streamline and automate various HR processes within 
           an organization. It encompasses functionalities like recruitment, onboarding,
@@ -21,7 +21,7 @@ const SignUp = () => {
         </div>
 
         <div class="col-lg-6 mb-5 mb-lg-0" >
-          <div class="card" style={{ marginRight: "100px"}} >
+          <div class="card" style={{ marginRight: "150px"}} >
             <div class="card-body py-5 px-md-5">
               <form>
                 <div class="row">
@@ -62,7 +62,7 @@ const SignUp = () => {
                 </button>
 
               
-                <div class="text-center">
+                {/* <div class="text-center">
                   <p>or sign up with:</p>
                   <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
                     <i class="fab fa-facebook-f"></i>
@@ -79,7 +79,7 @@ const SignUp = () => {
                   <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
                     <i class="fab fa-github"></i>
                   </button>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>

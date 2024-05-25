@@ -11,7 +11,7 @@ const Login  = () => {
   return (
     <div class="container" style={{ marginLeft: '200px' }}>
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="card mt-5">
                 <div class="card-header">
                     <h3 class="text-center">Login</h3>
@@ -32,7 +32,10 @@ const Login  = () => {
                             <label class="form-check-label" for="rememberMe">Remember me</label>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Login</button>
-                        <button type="submit" class="btn btn-danger w-20 mt-4 ml-20"onClick={()=> updateRecord()} >SignUp</button>
+                        <div class="call-to-action">
+                        {/* <button  type="submit" class="btn btn-danger w-20 mt-4 marginLeft: 80px"onClick={()=> updateRecord()} >SignUp</button> */}
+                        <button  type="submit" class="right-button"onClick={()=> updateRecord()} >SignUp</button>
+                        </div>
                     </form>
                 </div>
                 <div class="card-footer text-center">

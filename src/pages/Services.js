@@ -22,8 +22,9 @@ const Services = () => {
             <div class="card h-100">
               <img src={img1} class="card-img-top" alt="Service 1" />
               <div class="card-body">
-                <h5 class="card-title">Vehicle Sales</h5>
+                <h5 class="card-title">Web Developement</h5>
                 <p class="card-text">Explore our wide range of vehicles. From family cars to luxury sedans, we offer the best options to suit your needs.</p>
+                <button class="btn">Read More</button>
               </div>
             </div>
           </div>
@@ -32,8 +33,9 @@ const Services = () => {
             <div class="card h-100">
               <img src={img2} class="card-img-top" alt="Service 2" />
               <div class="card-body">
-                <h5 class="card-title">Vehicle Maintenance</h5>
+                <h5 class="card-title">Machine Learning</h5>
                 <p class="card-text">Our expert technicians provide top-notch maintenance services to keep your vehicle running smoothly.</p>
+                <button class="btn">Read More</button>
               </div>
             </div>
           </div>
@@ -42,8 +44,9 @@ const Services = () => {
             <div class="card h-100">
               <img src={img3} class="card-img-top" alt="Service 3" /> 
               <div class="card-body">
-                <h5 class="card-title">Customer Support</h5>
+                <h5 class="card-title">Mobile App Developement</h5>
                 <p class="card-text">We offer 24/7 customer support to assist you with any inquiries and ensure a seamless experience.</p>
+                <button class="btn">Read More</button>
               </div>
             </div>
           </div>
