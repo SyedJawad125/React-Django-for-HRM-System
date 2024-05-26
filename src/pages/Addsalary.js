@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import {React, useState} from 'react'
-import axios from 'axios'
+import axiosInstance from '../context/AxiosInstance';
+
 const Addsalary = () => {
     const navigate = useNavigate()
 
@@ -18,7 +19,7 @@ const Addsalary = () => {
 
       const payload = {"base_salary":base_salary , "gross_salary":gross_salary, "net_salary":net_salary , "pay_frequency":pay_frequency , "pay_grade":pay_grade, "allowances":allowances}
       
-      const response = await axios.post('http://localhost:8000/hrm/salary', payload , {
+      const response = await axiosInstance.post('/hrm/salary', payload , {
         headers: {
           'Content-Type': 'application/json'
         }

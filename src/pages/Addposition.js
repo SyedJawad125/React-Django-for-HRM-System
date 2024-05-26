@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import {React, useState, useEffect} from 'react'
-import axios from 'axios'
+import axiosInstance from '../context/AxiosInstance';
 
 const Addposition = () => {
 
@@ -17,8 +17,9 @@ const Addposition = () => {
   const [salRecords, setsalRecords] = useState([])
   
   useEffect(()=>{
+    // For dropdown list
     const fetchPostion = async () =>{
-      const res = await axios.get('http://localhost:8000/hrm/department')
+      const res = await axiosInstance.get('/hrm/department') 
       try{
           if (res){
             setdeptRecords(res.data.data.data)
@@ -29,9 +30,9 @@ const Addposition = () => {
       }
   }
   fetchPostion();
-
+    // For dropdown list
   const fetchSalary = async () =>{
-    const res = await axios.get('http://localhost:8000/hrm/salary')
+    const res = await axiosInstance.get('/hrm/salary')
     try{
         if (res){
           setsalRecords(res.data.data.data)
@@ -43,7 +44,6 @@ const Addposition = () => {
   }
   fetchSalary();
 
-
   }, [])
 
   const handleSubmit = async (e) => {
@@ -52,7 +52,7 @@ const Addposition = () => {
 
       const payload = {"position_title":position_title , "pos_description":pos_description, "day_of_week":day_of_week , "shift_start_time":shift_start_time , "shift_end_time":shift_end_time, "dept_has_position":dept_has_position, "posi_has_salary":posi_has_salary}
       
-      const response = await axios.post('http://localhost:8000/hrm/position', payload , {
+      const response = await axiosInstance.post('/hrm/position', payload , {
         headers: {
           'Content-Type': 'application/json'
         }

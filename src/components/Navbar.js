@@ -1,18 +1,23 @@
-import React from 'react'
+import {React, useContext} from 'react'
+import {Link} from 'react-router-dom'
+import { AuthCon } from '../context/AuthContext'
 
 const Navbar = () => {
+  const {logout} = useContext(AuthCon)
+
   return (
-    <div>
         <div class="sidenav">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="/login">Login</a>
-            <a href="/department">Department</a>
-            <a href="/salary">Salary</a>
-            <a href="/position">Position</a>
-            <a href="/contact">Contact</a>
-        </div>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/department">Department</Link>
+            <Link to="/salary">Salary</Link>
+            <Link to="/position">Position</Link>
+            <Link to="/contact">Contact</Link>
+            {
+                localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>
+            }
+        
         <div class="main">
             {/* <h2>Side Navbar Example</h2>
             <p>This is an example of a side navigation bar.</p> */}

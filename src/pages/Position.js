@@ -1,6 +1,6 @@
 import {React, useEffect, useState } from 'react'
 import { Link, useNavigate, useLocation  } from 'react-router-dom'
-import axios from 'axios'
+import axiosInstance from '../context/AxiosInstance';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../App.css'
@@ -25,7 +25,7 @@ const Position = () => {
     }
 
     const receiveData = async () =>{
-        const res = await axios.get('http://localhost:8000/hrm/position')
+        const res = await axiosInstance.get('/hrm/position')
         try{
             if (res){
                 setRecords(res.data.data.data)
@@ -43,7 +43,7 @@ const Position = () => {
 
 const deleteRecord = async (id) => {
     try{
-      const res = await axios.delete(`http://localhost:8000/hrm/position?id=${id}`)
+      const res = await axiosInstance.delete(`/hrm/position?id=${id}`)
 
       if (res){
         console.log('deleted successfully')

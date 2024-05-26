@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import {React, useState} from 'react'
-import axios from 'axios'
+import axiosInstance from '../context/AxiosInstance';
 const Adddepartment = () => {
     const navigate = useNavigate()
 
@@ -18,7 +18,7 @@ const Adddepartment = () => {
 
       const payload = {"dept_name":dept_name , "dept_description":dept_description, "dept_location":dept_location , "dept_budget":dept_budget , "dept_projects":dept_projects, "dept_goals":dept_goals}
       
-      const response = await axios.post('http://localhost:8000/hrm/department', payload , {
+      const response = await axiosInstance.post('/hrm/department', payload , {
         headers: {
           'Content-Type': 'application/json'
         }

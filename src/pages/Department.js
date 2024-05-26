@@ -1,10 +1,9 @@
 import {React, useEffect, useState} from 'react'
 import {Link, useNavigate, useLocation } from 'react-router-dom'
-import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../App.css'
-
+import axiosInstance from '../context/AxiosInstance';
 
 
 
@@ -29,7 +28,7 @@ const Department = () => {
       }
 
       const receiveData = async () =>{
-          const res = await axios.get('http://localhost:8000/hrm/department')
+          const res = await axiosInstance.get('/hrm/department')
           try{
               if (res){
                   setRecords(res.data.data.data)
@@ -47,7 +46,7 @@ const Department = () => {
 
   const deleteRecord = async (id) => {
       try{
-        const res = await axios.delete(`http://localhost:8000/hrm/department?id=${id}`)
+        const res = await axiosInstance.delete(`/hrm/department?id=${id}`)
   
         if (res){
           console.log('deleted successfully')

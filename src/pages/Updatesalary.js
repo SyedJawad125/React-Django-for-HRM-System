@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-import axios from 'axios'
+import axiosInstance from '../context/AxiosInstance';
 import { useNavigate , useLocation } from 'react-router-dom'
 
   const Updatesalary = () => {
@@ -23,7 +23,7 @@ import { useNavigate , useLocation } from 'react-router-dom'
     
           const payload = {"id": data.id,"base_salary":base_salary , "gross_salary":gross_salary, "net_salary":net_salary , "pay_frequency":pay_frequency , "pay_grade":pay_grade, "allowances":allowances}
           
-          const response = await axios.patch(`http://localhost:8000/hrm/salary`, payload , {
+          const response = await axiosInstance.patch(`/hrm/salary`, payload , {
             headers: {
               'Content-Type': 'application/json'
             }

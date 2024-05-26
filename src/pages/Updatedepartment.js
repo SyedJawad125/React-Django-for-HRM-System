@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
-import axios from 'axios'
 import { useNavigate , useLocation} from 'react-router-dom'
+import axiosInstance from '../context/AxiosInstance';
 
 const Updatedepartment = () => {
 
@@ -23,7 +23,7 @@ const Updatedepartment = () => {
 
       const payload = {"id": data.id,"dept_name":dept_name , "dept_description":dept_description, "dept_location":dept_location , "dept_budget":dept_budget , "dept_projects":dept_projects, "dept_goals":dept_goals}
       
-      const response = await axios.patch(`http://localhost:8000/hrm/department`, payload , {
+      const response = await axiosInstance.patch(`/hrm/department`, payload , {
         headers: {
           'Content-Type': 'application/json'
         }

@@ -1,9 +1,9 @@
 import {React, useEffect, useState } from 'react'
 import { Link, useNavigate, useLocation  } from 'react-router-dom'
-import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../App.css'
+import axiosInstance from '../context/AxiosInstance';
 
 const Salary = () => {
   const navigate = useNavigate()
@@ -25,7 +25,7 @@ const Salary = () => {
     }
 
     const receiveData = async () =>{
-        const res = await axios.get('http://localhost:8000/hrm/salary')
+        const res = await axiosInstance.get('/hrm/salary')
         try{
             if (res){
                 setRecords(res.data.data.data)
@@ -43,7 +43,7 @@ const Salary = () => {
 
 const deleteRecord = async (id) => {
     try{
-      const res = await axios.delete(`http://localhost:8000/hrm/salary?id=${id}`)
+      const res = await axiosInstance.delete(`/hrm/salary?id=${id}`)
 
       if (res){
         console.log('deleted successfully')
